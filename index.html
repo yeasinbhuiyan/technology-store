@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html data-theme="night" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone's Store</title>
+
+    <!-- daisyui cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style/style.css">
+
+
+    <!-- sweetalert2 cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+
+    <!-- flowbite cdn link  -->
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" /> -->
+
+
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/e015cf26cf.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <header class="p-5">
+        <!-- bg-base-100 -->
+        <nav>
+            <div class="navbar navbar-bg shadow-2xl rounded">
+                <div class="flex-1">
+
+                    <a class="btn btn-ghost normal-case text-xl"></a> <span
+                        class="technology text-2xl font-bold">Technology </span>
+                    <span id="store-name" class="store font-medium"> <br>
+                        Store </span>
+
+                </div>
+                <div class="flex-none">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <div class="indicator">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span class="badge badge-sm indicator-item">8</span>
+                            </div>
+                        </label>
+                        <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+                            <div class="card-body">
+                                <span class="font-bold text-lg">8 Items</span>
+                                <span class="text-info">Subtotal: $999</span>
+                                <div class="card-actions">
+                                    <button class="btn btn-primary btn-block">View cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1488402410361-05152fa654d3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5266aadc96d5b5b23996e7120d3190a8&auto=format&fit=crop&w=1350&q=80" />
+                            </div>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                                <a class="justify-between">
+                                    Profile
+                                    <span class="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- style="background-image:linear-gradient(to bottom, rgba(13, 15, 26, 0.389), rgba(0, 0, 0, 0.73)), url('images/banner.png'); -->
+
+        <!-- banner section  -->
+        <section>
+
+            <div class="grid grid-cols-1">
+                <div class="bg-image bg rounded"
+                    style="background-image:linear-gradient(to bottom, rgba(13, 15, 26, 0.219), rgba(0, 0, 0, 0.402)), url(images/tachnology3.jpg); height: 500px; ">
+                    <div>
+                        <div class=" up-auto">
+                            <h1 class="text-3xl  text-white">The Best Online
+                                Technology<span id="store-name2" class="store font-medium text-xl">Store</span> </h1>
+                            <p class="paragraph primary-200 text-sm mb-3 mt-3">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsam cum
+                                iusto vitae iure qui
+                                perferendis atque saepe. Necessitatibus dolorem iste adipisci, assumenda placeat quae?
+                                Repudiandae nulla perferendis repellendus cum eius adipisci nihil. Modi magni eius
+                                corrupti, inventore nisi consectetur culpa reiciendis eos, dignissimos optio quasi fuga
+                                possimus, accusantium veniam explicabo?</p>
+
+
+                            <div class="input-group inputBtn h-1">
+                                <input id="inputField" type="text" placeholder="Search…"
+                                    class="input  input-bordered" />
+                                <button id="inputBtn" class="btn btn-primary btn-square">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- modal section -->
+
+
+        <section>
+<!-- The button to open modal -->
+
+
+
+<input type="checkbox" id="my-modal-5" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <!-- <h3 class="font-bold text-lg">Congratulations random Internet user!</h3> -->
+    <div class="grid grid-cols-1 lg:grid-cols-2" id="modal-body">
+       
+        </div>
+        <div class="modal-action">
+            <label for="my-modal-5" class="btn btn-primary">Close</label>
+          </div>
+        <!-- modal-body  -->
+    </div>
+    <p class=""></p>
+   
+  </div>
+</div>
+
+        </section>
+
+
+
+
+
+        <!-- spinner  -->
+        <!-- <section>
+    <div id="spinner" class="flex items-center hidden justify-center">
+        <div
+          class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+          role="status">
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Loading...</span
+          >
+        </div>
+      </div>
+</section> -->
+
+
+
+
+
+
+
+    </header>
+    <main class="p-5">
+        <section class="pl-3">
+            <div id="phone-container" class="grid lg:grid-cols-3 sm:grid-cols-1 mt-5">
+
+            </div>
+        </section>
+        <div id="seeAllBtn" class="text-center hidden mt-5">
+            <button class="btn btn-primary">See All</button>
+        </div>
+
+
+
+        <section>
+            <div class="grid grid-cols-1 text-center m-top">
+                <h1 id="question-container" class="text-4xl"> Asked Question?</h1>
+                <p class="mt-3 frequent-paragraph text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <br> Rerum officia animi aliquam nulla? Maiores
+                    inventore minus quasi <br> quod, a cupiditate officia, numquam ea magnam dolorem, unde <br> impedit
+                    ametbr
+                    aliquid adipisci.
+                </p>
+
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 frequent-top">
+                <div class="phone-container">
+                    <img id="phone-img" class="rounded-box" src="images/phone.jpg" alt=""
+                        style="height:400px; width:550px ;">
+
+                </div>
+                <div class="mt-5">
+                    <div tabindex="1"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            What is technology in our life?
+                        </div>
+                        <div class="collapse-content">
+                            <p>We use technologies to exchange information, to clean our clothes, to prepare
+                                our meals and to get from one place to another. But even everyday items like door locks,
+                                floor panels and furniture are technologies that we now take for granted
+                                and that seem less impressive to us than self-driving cars or 3D printing.</p>
+                        </div>
+                    </div>
+
+
+                    <div tabindex="2"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            What is technology and importance?
+
+                        </div>
+                        <div class="collapse-content">
+                            <p>Technology is the application of knowledge for achieving practical
+                                goals in a reproducible way. The word technology can also mean the products resulting
+                                from such efforts, including both
+                                tangible tools such as utensils or machines, and intangible ones such as software.</p>
+                        </div>
+                    </div>
+
+
+                    <div tabindex="3"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            Why is mobile technology important?
+
+                        </div>
+                        <div class="collapse-content">
+                            <p>Mobile devices reduce the need for expensive technology, such as landline carrier
+                                services. Cloud-based services are cheaper than using any of the systems Technology can
+                                also give your business more flexibility and improved productivity.</p>
+                        </div>
+                    </div>
+
+
+                    <div tabindex="4"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            What are the 4 mobile technologies?
+                        </div>
+                        <div class="collapse-content">
+                            <p>What are the different mobile technologies? There are four main types of mobile networks
+                                – cellular communication, 4G networking, Wi-Fi, and Bluetooth connections.</p>
+                        </div>
+                    </div>
+                    <div tabindex="5"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            How does cell phone technology benefit our society?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Communication. Mobile phones provide the means to communicate with friends, family,
+                                coworkers, and indeed most of the world's population instantly. Unlike previous
+                                communication devices, they can be on hand for the caller at all times and used in any
+                                place where there is a signal.</p>
+                        </div>
+                    </div>
+                    <div tabindex="6"
+                        class="frequent collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                        <div class="collapse-title text-xl font-medium">
+                            How mobile technology has changed the world? </div>
+                        <div class="collapse-content">
+                            <p>Now just one device has replaced the pedometer, portable music player, alarm clock, GPS,
+                                calculator, camera, flashlight, calendar and much more. While many people may still have
+                                these things, they are no longer necessary to fulfill the need they were designed to
+                                accomplish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- email address  -->
+
+        <!-- tailwind-elements -->
+        <!-- https://tailwind-elements.com/docs/standard/forms/login-form/ -->
+        <section>
+            <div class="text-3xl m-top text-center">
+                <h1 class="mt-5">LOGIN INFO</h1>
+            </div>
+            <div>
+                <div>
+                    <section class="h-screen">
+
+                        <div class="h-full">
+
+                            <div class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+                                <div
+                                    class="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+                                    <img src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                                        class="w-full" alt="Sample image" />
+                                </div>
+                                <div class="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
+                                    <form>
+                                        <div class="flex flex-row items-center justify-center lg:justify-start">
+                                            <p class="mb-0 mr-4 text-lg">Sign in with</p>
+                                            <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                                                class="mx-1 h-9 w-9 rounded-full bg-primary uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                                                <!-- Facebook -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-3.5 w-3.5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                                                class="mx-1 h-9 w-9 rounded-full bg-primary uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                                                <!-- Twitter -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-3.5 w-3.5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                                                class="mx-1 h-9 w-9 rounded-full bg-primary uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                                                <!-- Linkedin -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-3.5 w-3.5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div
+                                            class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+                                            <p class="mx-4 mb-0 text-center font-semibold dark:text-white">
+                                                Or
+                                            </p>
+                                        </div>
+
+                                        <!-- Email input -->
+                                        <div class="relative mb-6" data-te-input-wrapper-init>
+                                            <input type="text"
+                                                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                                id="input-email" placeholder="Email address" />
+                                            <label for="input-email"
+                                                class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200">Email
+                                                address
+                                            </label>
+                                        </div>
+
+                                        <!-- Password input -->
+                                        <div class="relative mb-6" data-te-input-wrapper-init>
+
+                                            <input type="password"
+                                                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                                id="input-password" placeholder="Password" />
+                                            <label for="input-password"
+                                                class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200">Password
+                                            </label>
+                                        </div>
+
+                                        <div class="mb-6 flex items-center justify-between">
+                                            <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                                                <input
+                                                    class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 dark:border-neutral-600 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary dark:checked:border-primary checked:bg-primary dark:checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
+                                                    type="checkbox" value="" id="exampleCheck2" />
+                                                <label class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                                                    for="exampleCheck2">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                            <a href="#!">Forgot password?</a>
+                                        </div>
+
+                                        <div class="text-center lg:text-left">
+                                            <button id="input-btn" type="button"
+                                                class="inline-block rounded bg-primary px-7 pt-3 pb-2.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                                                data-te-ripple-init data-te-ripple-color="light">
+                                                Login
+                                            </button>
+                                            <p class="mt-2 mb-0 pt-1 text-sm font-semibold">
+                                                Don't have an account?
+                                                <a href="#!"
+                                                    class="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700">Register</a>
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="p-5 m-top footer-bg">
+
+            <div class="grid grid-cols-1 lg:grid-cols-4   p-5">
+
+                <div class="mt-5">
+                    <h1 class="font-bold"><a href="">SHOP</a></h1>
+                    <ul class="ul">
+                        <li class="mt-3"><a href="">Plans</a></li>
+                        <li class="mt-2"><a href="">Phones</a></li>
+                        <li class="mt-2"><a href="">Tablets</a></li>
+                        <li class="mt-2"><a href="">Tourist Plan</a></li>
+                        <li class="mt-2"><a href="">PayGo Plan</a></li>
+                        <li class="mt-2"><a href="">Add a Line</a></li>
+                    </ul>
+
+
+
+                </div>
+                <div class="mt-5">
+                    <h1 class="font-bold"><a href="">SERVICE FEATURES</a></h1>
+                    <ul class="ul">
+                        <li class="mt-3"><a href="">Coverage</a></li>
+                        <li class="mt-2"><a href="">5G</a></li>
+                        <li class="mt-2"><a href="">Features</a></li>
+                        <li class="mt-2"><a href="">uTalk</a></li>
+                        <li class="mt-2"><a href="">Call China</a></li>
+                        <li class="mt-2"><a href="">Call Mexico</a></li>
+                        <li class="mt-2"><a href="">Call India</a></li>
+                    </ul>
+
+
+
+                </div>
+                <div class="mt-5">
+                    <h1 class="font-bold"><a href="">ABOUT ULTRA MOBILE</a></h1>
+                    <ul class="ul">
+                        <li class="mt-3"><a href="">About ULTRA MOBILE</a></li>
+                        <li class="mt-2"><a href="">Refer A Friend</a></li>
+                        <li class="mt-2"><a href="">Become A Retailer</a></li>
+                        <li class="mt-2"><a href="">Become A Partner</a></li>
+                        <li class="mt-2"><a href="">Testimonials</a></li>
+                        <li class="mt-2"><a href="">Careers</a></li>
+                        <li class="mt-2"><a href="">In The News</a></li>
+                        <li class="mt-2"><a href="">FAQ</a></li>
+                        <li class="mt-2"><a href="">Phone Order Status</a></li>
+                    </ul>
+
+
+
+                </div>
+                <div class="mt-5">
+                    <h1 class="font-bold">Subscribe to our newsletter below.</h1>
+                    <div class="flex justify-between mt-3">
+                        <input class="rounded p-2 text-white" placeholder="Email" type="text">
+                        <button class="btn btn-primary text-white">Sign Up</button>
+                    </div>
+                    <div class="flex mt-3 w-70">
+
+
+
+
+                        <i class="fa-brands fa-discord p-2"></i>
+
+                        <i class="fa-brands fa-instagram  p-2"></i>
+
+
+
+                        <i class="fa-brands fa-twitter  p-2"></i>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="index.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script> -->
+
+</body>
+
+</html>
