@@ -12,8 +12,14 @@ const phone = (searchText, num) => {
     .then(data => displayPhone(data.data, num))
 
 }
+
+
 // https://mdbcdn.b-cdn.net/img/new/slides/005.webp
+
+
+
 const displayPhone = (data, num) => {
+  document.getElementById('seeAllBtn').style.display = 'none'
 
   let newPhone;
 
@@ -26,8 +32,43 @@ const displayPhone = (data, num) => {
     )
 
   }
+  else{
+
+
+
+    let timerInterval
+Swal.fire({
+
+  title: 'Wait A Second.',
+  html: 'I will Give in <b></b> milliseconds.',
+  timer: 1000,
+  timerProgressBar: true,
+  
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+
+
+
+
+
+  }
   const phoneContainer = document.getElementById('phone-container')
   phoneContainer.innerHTML = ''
+
   if (data.length > 6 && num == 10) {
     let newData = data.slice(0, 6)
     newPhone = newData
@@ -39,6 +80,8 @@ const displayPhone = (data, num) => {
     newPhone = data
     document.getElementById('seeAllBtn').style.display = 'none'
   }
+
+
 
   newPhone.forEach(element => {
     const isBookMark = checkBookMark(element.slug)
@@ -98,7 +141,7 @@ const displayInfo = (data) => {
   infoContainer.innerHTML = ` <div class="mt-4">
   <h1 class="text-2xl font-semibold">${data.name}
   </h1>
-  <img class="rounded-box" src="${data.image}" alt="" style="width: 200px; height: 200px;">
+  <img class="rounded-box" src="${data.image}" alt="" style="width: 200px; height: 250px;">
   </div>
   <div>
 <div class="mt-5">
