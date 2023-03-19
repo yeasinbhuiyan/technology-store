@@ -164,6 +164,7 @@ const info = (id) => {
 
 const displayInfo = (data) => {
   const infoContainer = document.getElementById('modal-body')
+  infoContainer.innerHTML=''
   console.log(data)
   infoContainer.innerHTML = ` <div class="mt-4">
   <h1 class="text-2xl font-semibold">${data.name}
@@ -175,17 +176,17 @@ const displayInfo = (data) => {
 
 <h3 class="text-xl">${data.mainFeatures.storage}
 </h3>
-<h3>${data.mainFeatures.displaySize}
+<h3>${data.mainFeatures?.displaySize? data.mainFeatures.displaySize : "Not Found"}
 </h3>
-<h3>${data.mainFeatures.memory}
+<h3>${data.mainFeatures?.memory? data.mainFeatures.memory : "Not Found"}
 </h3>
-<h3>${data.others.Bluetooth}
+<h3>${data.others?.Bluetooth? data.others.Bluetooth : "Not Found"}
 </h3>
-<h3>${data.others.GPS}
+<h3>${data.others?.GPS? data.others.GPS :"Not Found"}
 </h3>
-<h3>${data.others.USB}
+<h3>${data.others?.USB? data.others.USB :"Not Found"}
 </h3>
-<h3>${data.others.WLAN}
+<h3>${data.others?.WLAN? data.others.WLAN :"Not Found"}
 </h3>
 
 <h3 class="text-2xl">${data.releaseDate}</h3>
