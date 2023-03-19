@@ -513,3 +513,7 @@ setInterval(()=>{
   loginHeader.innerText=loading
   num5++
 },150)
+
+
+
+phone('iphone',10)
