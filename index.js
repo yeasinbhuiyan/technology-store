@@ -1,8 +1,10 @@
-// 
-// const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
 const inputField = document.getElementById('inputField')
 const inputbtn = document.getElementById('inputBtn')
 
+
+
+
+// start fetch
 
 const phone = (searchText, num) => {
 
@@ -18,10 +20,15 @@ const phone = (searchText, num) => {
 
 
 
+// display phone 
+
 const displayPhone = (data, num) => {
   document.getElementById('seeAllBtn').style.display = 'none'
 
   let newPhone;
+
+
+  // jodi amra kono value na diye search di tahole ey error msg dibe
 
   if (data.length == 0) {
 
@@ -32,40 +39,50 @@ const displayPhone = (data, num) => {
     )
 
   }
-  else{
+  else {
 
+
+    // jodi sothike search di tahole ey loading hobe 
 
 
     let timerInterval
-Swal.fire({
+    Swal.fire({
 
-  title: 'Wait A Second.',
-  html: 'I will Give in <b></b> milliseconds.',
-  timer: 1000,
-  timerProgressBar: true,
-  
-  didOpen: () => {
-    Swal.showLoading()
-    const b = Swal.getHtmlContainer().querySelector('b')
-    timerInterval = setInterval(() => {
-      b.textContent = Swal.getTimerLeft()
-    }, 100)
-  },
-  willClose: () => {
-    clearInterval(timerInterval)
+      title: 'Wait A Second.',
+      html: 'I will Give in <b></b> milliseconds.',
+      timer: 1000,
+      timerProgressBar: true,
+
+      didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft()
+        }, 100)
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+      }
+    })
+
+
+
+
+
   }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log('I was closed by the timer')
-  }
-})
 
 
 
+  // tarpor data length jodi 6 er beshi hoy tahole slice kore 6 ti kore display korbo 
+  // and see all btn show korbo 
 
 
-  }
+
   const phoneContainer = document.getElementById('phone-container')
   phoneContainer.innerHTML = ''
 
@@ -130,11 +147,21 @@ class="${isBookMark ? 'fa fa-bookmark' : 'fa-regular fa-bookmark'}"></i>
 }
 
 
+// modal er jonno id onclick er maddome fetch koresi
+
 const info = (id) => {
   fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
     .then(res => res.json())
     .then(data => displayInfo(data.data))
 }
+
+
+
+
+// then display koresi 
+
+
+
 const displayInfo = (data) => {
   const infoContainer = document.getElementById('modal-body')
   console.log(data)
@@ -167,6 +194,17 @@ const displayInfo = (data) => {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+// book mark area 
 
 const handleBookmark = (id, name, brand) => {
 
@@ -205,6 +243,8 @@ const handleBookmark = (id, name, brand) => {
 
 
 
+// remove bookmark area 
+
 
 const removeBookmark = (id) => {
   const previous = JSON.parse(localStorage.getItem('BookMark'))
@@ -212,6 +252,10 @@ const removeBookmark = (id) => {
   localStorage.setItem('BookMark', JSON.stringify(remove))
 
 }
+
+
+// check bookmark
+
 
 const checkBookMark = (id) => {
 
@@ -239,6 +283,8 @@ const checkBookMark = (id) => {
 
 
 
+// search btn 
+
 
 document.getElementById('inputBtn').addEventListener('click', () => {
   const value = inputField.value
@@ -246,7 +292,7 @@ document.getElementById('inputBtn').addEventListener('click', () => {
 
 })
 
-
+// see all btn 
 
 document.getElementById('seeAllBtn').addEventListener('click', () => {
 
@@ -254,6 +300,16 @@ document.getElementById('seeAllBtn').addEventListener('click', () => {
   phone(value)
 })
 
+
+
+// input enter 
+
+inputField.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("inputBtn").click();
+  }
+});
 
 document.getElementById('input-btn').addEventListener('click', () => {
   const email = document.getElementById('input-email')
@@ -265,7 +321,6 @@ document.getElementById('input-btn').addEventListener('click', () => {
   if (email.value.length > 0 && password.value.length > 0) {
     email.value = ''
     password.value = ''
-    // console.log('yess')
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -306,14 +361,12 @@ const store = [
   'Store',
 ]
 
-// const storeName =document.getElementById('store-name')
 let num = 0;
 setInterval(() => {
   if (num === store.length) {
     num = 0
   }
   const storeName = store[num]
-  // document.getElementById('store-name').innerText = storeName
   document.getElementById('store-name2').innerText = storeName
   num++
 
@@ -357,7 +410,6 @@ setInterval(() => {
     num2 = 0
   }
   const storeName = question[num2]
-  // document.getElementById('store-name').innerText = storeName
   document.getElementById('question-container').innerText = storeName
   num2++
 
@@ -369,49 +421,95 @@ setInterval(() => {
 }, 100)
 
 
-// loadSpinner
-
-// const loadSpinner=(loading)=>{
-//   const spinner =document.getElementById('spinner')
-//   if(loading){
-//   spinner.classList.remove('hidden')
-//   }
-//   else{
-//     spinner.classList.add('hidden')
-
-//   }
-
-// }
 
 
 
-// const images =[
+// const question1 = [
 
-//   'phone.jpg',
-//   'phone.jpg',
-//   'phone.jpg',
-//   'phone.jpg',
-
+//   'Wha',
+//   'What i',
+//   'What is t',
+//   'What is te',
+//   'What is tec',
+//   'What is tech',
+//   'What is techno',
+//   'What is technolog',
+//   'What is technology in',
+//   'What is technology in o',
+//   'What is technology in our',
+//   'What is technology in our l',
+//   'What is technology in our li',
+//   'What is technology in our life?'
 // ]
 
-// const phoneImg = document.getElementById('phone-img')
-// let num=0;
-
+// const question2=document.getElementById('question-one')
+// let num3=0
 // setInterval(()=>{
-//   // console.log(num++)
-
-//   if(num === images.length){
-//     num=0
+//   if(num3== question1.length){
+//     num3=0
 //   }
+//   const set = question1[num3]
+//   question2.innerText=set
+//   num3++
 
-//   const image = images[num]
-//   num++
-//   phoneImg.setAttribute('src',image)
-//   console.log(image)
-
-// },1000)
+// },100)
 
 
+// const question4 = [
+
+//  'What ',
+//  'What is' ,
+//  'What is technology ',
+//  'What is technology in ',
+//  'What is technology in our',
+//  'What is technology in our life?',
+// ]
+
+// const question3=document.getElementById('question-two')
+// let num4=0
+// setInterval(()=>{
+//   if(num4== question4.length){
+//     num4=0
+//   }
+//   const set = question4[num4]
+//   question3.innerText=set
+//   num4++
+
+// },500)
 
 
-phone('iphone', 10)
+
+
+
+
+
+
+const login =[
+'L',
+'LO',
+'LOG',
+'LOGI',
+'LOGIN',
+'LOGIN ',
+'LOGIN I',
+'LOGIN IN',
+'LOGIN INF',
+'LOGIN INFO',
+
+
+  
+]
+
+
+const loginHeader = document.getElementById('login')
+
+let num5=0
+
+setInterval(()=>{
+  if(num5== login.length){
+    num5=0
+  }
+  const loading = login[num5]
+  loginHeader.innerText=loading
+  num5++
+},150)
