@@ -516,4 +516,16 @@ setInterval(()=>{
 
 
 
+
+// device name 
+
+// ipad
+// iphone
+// samsung
+// oppo
+// watch
+// mate 
+// nova
+// reno
+
 phone('iphone',10)
